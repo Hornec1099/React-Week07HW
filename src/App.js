@@ -1,24 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import QuotesContainer from './containers/QuoteContainer';
 
 function App() {
+
+  const animes = [
+    {name: "Random" , url: "https://animechan.vercel.app/api/quotes"},
+    {name: "Naruto" , url: "https://animechan.vercel.app/api/quotes/anime?title=naruto"},
+    {name: "Bleach" , url: "https://animechan.vercel.app/api/quotes/anime?title=bleach"},
+    {name: "One Piece" , url: "https://animechan.vercel.app/api/quotes/anime?title=piece"},
+    {name: "Shingeki no Kyojin" , url: "https://animechan.vercel.app/api/quotes/anime?title=kyojin"}
+  ]
+    
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <QuotesContainer animes = {animes}/>
   );
 }
 
